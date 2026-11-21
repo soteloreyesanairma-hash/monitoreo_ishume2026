@@ -1,0 +1,188 @@
+/* ESTILOS NUEVOS DEL SISTEMA (usa los mismos colores de configuracion.css) */
+
+/* Listas desplegables dentro de formularios */
+.formulario select {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: var(--negro);
+    color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+    outline: none;
+}
+
+.formulario select:focus {
+    border-color: var(--naranja);
+}
+
+/* Tabla general (ancho automatico) */
+.tabla-datos {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--negro-secundario);
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+}
+
+.tabla-datos thead {
+    background-color: var(--gris);
+}
+
+.tabla-datos th {
+    color: var(--gris-texto);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding: 16px 18px;
+    white-space: nowrap;
+}
+
+.tabla-datos td {
+    color: var(--blanco);
+    font-size: 13px;
+    padding: 14px 18px;
+    border-top: 1px solid var(--gris-borde);
+}
+
+.tabla-datos tbody tr:hover {
+    background-color: var(--gris);
+}
+
+/* Etiquetas de estado */
+.etiqueta {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    border: 1px solid var(--gris-suave);
+    color: var(--gris-texto);
+}
+
+.etiqueta-pendiente {
+    color: var(--amarillo);
+    border-color: var(--amarillo);
+}
+
+.etiqueta-proceso {
+    color: var(--naranja);
+    border-color: var(--naranja);
+}
+
+.etiqueta-completado {
+    color: var(--verde);
+    border-color: var(--verde);
+}
+
+.etiqueta-impreso {
+    color: #38BDF8;
+    border-color: #38BDF8;
+}
+
+.etiqueta-armado {
+    color: #A78BFA;
+    border-color: #A78BFA;
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.filtros a {
+    padding: 8px 14px;
+    border: 1px solid var(--gris-borde);
+    border-radius: 20px;
+    color: var(--gris-texto);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.filtros a:hover {
+    border-color: var(--naranja);
+    color: var(--naranja);
+}
+
+.filtros a.activo {
+    background-color: var(--naranja);
+    border-color: var(--naranja);
+    color: var(--negro);
+}
+
+/* Botones pequenos dentro de las tablas */
+.btn-accion {
+    display: inline-block;
+    background-color: var(--naranja);
+    color: var(--negro);
+    border: 1px solid var(--naranja);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-accion:hover {
+    background-color: var(--blanco);
+    border-color: var(--blanco);
+}
+
+.btn-accion-claro {
+    background-color: transparent;
+    color: var(--naranja);
+}
+
+.form-en-linea {
+    display: inline;
+    margin: 0;
+}
+
+/* Mensajes */
+.mensaje {
+    max-width: 700px;
+    background-color: var(--negro-secundario);
+    border: 1px solid var(--rojo);
+    border-radius: 8px;
+    padding: 25px 30px;
+    color: var(--blanco);
+    line-height: 1.6;
+}
+
+.mensaje p {
+    margin-bottom: 18px;
+}
+
+.texto-vacio {
+    color: var(--gris-suave);
+    font-size: 13px;
+}
+
+/* Lista de colegios actuales (detalle del practicante) */
+.colegio-actual {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gris-borde);
+}
+
+.colegio-actual:last-child {
+    border-bottom: none;
+}
+
+/* Espacio entre secciones del detalle */
+.bloque {
+    margin-top: 30px;
+}
+
+.bloque h2 {
+    color: var(--gris-texto);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
