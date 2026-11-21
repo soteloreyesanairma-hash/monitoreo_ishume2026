@@ -1,13 +1,21 @@
-<?php
+<?php   
 class DashboardController
 {
     public function index()
     {
         require_once "config/conexion.php";
 
-        // Lista de practicantes
+        // Texto escrito en el buscador
+        $textoBuscado = trim($_GET["buscar"] ?? "");
+        $buscar = $conexion->real_escape_string($textoBuscado);
+
+        // Lista de practicantes (filtrada por el buscador)
         $sql = "SELECT id, DNI, nombres, apellidos, telefono, carrera
                 FROM practicantes
+                WHERE DNI LIKE '%$buscar%'
+                   OR nombres LIKE '%$buscar%'
+                   OR apellidos LIKE '%$buscar%'
+                   OR CONCAT(nombres, ' ', apellidos) LIKE '%$buscar%'
                 ORDER BY id ASC";
 
         $resultado = $conexion->query($sql);

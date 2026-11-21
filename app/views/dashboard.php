@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="/monitoreo_ishume_2026/public/css/tablas.css">
     <link rel="stylesheet" href="/monitoreo_ishume_2026/public/css/sistema.css">
 </head>
+
 <body>
     <div class="contenedor">
         <?php
@@ -59,6 +61,14 @@
                     <a href="/monitoreo_ishume_2026/app/views/agregar_practicante.php"
                         class="btn-agregar">+ AGREGAR PRACTICANTE</a>
                 </div>
+                <form action="/monitoreo_ishume_2026/" method="GET" class="buscador">
+                    <input type="text" name="buscar" placeholder="Buscar por DNI, nombres o apellidos..."
+                        value="<?php echo htmlspecialchars($textoBuscado); ?>">
+                    <button type="submit" class="btn-accion">BUSCAR</button>
+                    <?php if ($textoBuscado != ""): ?>
+                        <a href="/monitoreo_ishume_2026/" class="btn-accion btn-accion-claro">LIMPIAR</a>
+                    <?php endif; ?>
+                </form>
                 <div class="tabla-contenedor">
                     <table class="tabla-datos">
                         <thead>
@@ -71,6 +81,11 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php if (count($practicantes) == 0): ?>
+                                <tr>
+                                    <td colspan="5">No se encontraron practicantes.</td>
+                                </tr>
+                            <?php endif; ?>
                             <?php foreach ($practicantes as $practicante): ?>
                                 <tr>
                                     <td><?php echo $practicante["DNI"]; ?></td>
@@ -89,4 +104,5 @@
         </main>
     </div>
 </body>
+
 </html>

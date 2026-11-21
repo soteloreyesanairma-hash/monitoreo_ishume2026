@@ -186,3 +186,26 @@
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
+
+/* Buscador */
+.buscador {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.buscador input {
+    flex: 1;
+    max-width: 420px;
+    padding: 12px 14px;
+    background-color: var(--negro-secundario);
+    color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+    outline: none;
+}
+
+.buscador input:focus {
+    border-color: var(--naranja);
+}
